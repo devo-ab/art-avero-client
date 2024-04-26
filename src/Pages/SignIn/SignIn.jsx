@@ -79,7 +79,7 @@ const SignIn = () => {
     <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl text-base-content border border-indigo-500 mt-10 mb-10">
       <h1 className="text-2xl font-bold text-center">Sign In</h1>
       <form onSubmit={handleSignIn} className="space-y-6">
-        <div className="space-y-1 text-sm">
+        <div className="space-y-1">
           <label htmlFor="email" className="block text-base-content">
             Email
           </label>
@@ -87,11 +87,11 @@ const SignIn = () => {
             type="email"
             name="email"
             id="email"
-            placeholder="email"
+            placeholder="Enter your email"
             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 text-gray-800"
           />
         </div>
-        <div className="space-y-1 text-sm">
+        <div className="space-y-1">
           <label htmlFor="password" className="block text-base-content">
             Password
           </label>
@@ -99,7 +99,7 @@ const SignIn = () => {
             type="password"
             name="password"
             id="password"
-            placeholder="Password"
+            placeholder="Enter your password"
             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
           />
           <div className="flex justify-end text-xs text-base-content">
@@ -114,7 +114,7 @@ const SignIn = () => {
       </form>
       <div className="flex items-center pt-4 space-x-1">
         <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
-        <p className="px-3 text-sm text-base-content">Login with social accounts</p>
+        <p className="px-3 text-base-content">Login with social accounts</p>
         <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
       </div>
       <div className="flex justify-center space-x-4">
@@ -146,9 +146,9 @@ const SignIn = () => {
           </svg>
         </button>
       </div>
-      <p className="text-xs text-center sm:px-6 text-base-content">
+      <p className="text-center sm:px-6 text-base-content">
         Don't have an account?
-        <Link to="/signup" rel="noopener noreferrer" href="#" className="underline text-indigo-500">
+        <Link to="/signup" rel="noopener noreferrer" href="#" className="underline text-indigo-500 font-medium">
           Sign up
         </Link>
       </p>

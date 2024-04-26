@@ -74,7 +74,7 @@ const SignUp = () => {
                     type="email"
                     name="email"
                     required
-                    placeholder="Enter your Email"
+                    placeholder="Enter your email"
                     className="w-full py-2 px-4 rounded-md dark:border-gray-300 dark:bg-gray-50 text-gray-800"
                   />
                 </div>
@@ -84,7 +84,7 @@ const SignUp = () => {
                     id="photoURL"
                     type="text"
                     name="photoURL"
-                    placeholder="Enter your PhotoURL"
+                    placeholder="Enter your photoURL"
                     className="w-full py-2 px-4 rounded-md dark:border-gray-300 dark:bg-gray-50 text-gray-800"
                   />
                 </div>
