@@ -1,8 +1,14 @@
-# React + Vite
+# Art Avero
+This site live link [Art Avero](https://art-avero.web.app/).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Feature
+* User friendly design to ensure that the website is easy to navigate and provides a pleasant user experience. 
+* user can review about the art and craft, feedback take positively to improve.
+* User use to create a account,account details are safely store.
+* website responsive for all device(mobile, tablet, desktop).
+* An intuitive navigation menu helps visitors easily find what they're looking for.
+* user can create account and user's data are safe.
+* User Can Add art And Craft But To Do this , Must Need Create Account.
+* User Can See What he/she add in database in My Art and Crafts Section.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Website Category ### Painting and Drawing
