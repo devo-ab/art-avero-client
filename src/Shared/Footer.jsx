@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="p-10 bg-base-200 text-base-content">
-      <footer className="footer ">
+      <footer className="footer grid grid-cols-2 lg:grid-cols-none">
         <aside>
           <img className="fill-current w-20" src="/art-avero-logo.png" alt="" />
           <p>
