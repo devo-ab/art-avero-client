@@ -1,9 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   const navLinks = (
     <div className="lg:space-x-5 space-y-2 md:space-y-0 flex flex-col lg:flex-row items-center">
@@ -19,7 +23,7 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
-        to="/about"
+        to="all-art-and-crafts"
         className={({ isActive }) =>
           isActive
             ? "text-base-content text-lg font-medium border border-indigo-500 rounded-md px-3 py-1 text-center"
@@ -30,7 +34,7 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
-        to="/user-profile"
+        to="/add-crafts"
         className={({ isActive }) =>
           isActive
             ? "text-base-content text-lg font-medium border border-indigo-500 rounded-md px-3 py-1 text-center"
@@ -41,7 +45,7 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
-        to="/user-profile"
+        to="/my-art-craft"
         className={({ isActive }) =>
           isActive
             ? "text-base-content text-lg font-medium border border-indigo-500 rounded-md px-3 py-1 text-center"
@@ -53,15 +57,36 @@ const Navbar = () => {
     </div>
   );
 
-
+//   themes setup start
+//   const [themes, setThemes] = useState('light');
+//   useEffect(() => {
+//     localStorage.setItem('theme', themes);
+//     const localTheme = localStorage.getItem('theme');
+//     document.querySelector('html').setAttribute('data-theme', localTheme)
+// },[themes]);
   const handleThemes = (e) => {
     if(e.target.checked){
         document.querySelector('html').setAttribute('data-theme', 'dark')
+        // setThemes('dark')
     }
     else{
         document.querySelector('html').setAttribute('data-theme', 'light')
+        // setThemes('light')
     }
   };
+//   themes setup end
+
+   const handleSingOut = () => {
+    logOut()
+    .then((result) => {
+        console.log(result)
+        toast("Sign Out successfully");
+      })
+      .catch((error) => {
+        console.log(error)
+        toast("Something wrong, please try again");
+      });
+   };
 
   return (
     <div className="navbar bg-base-100">
@@ -113,7 +138,7 @@ const Navbar = () => {
         </div>
         <div>
           {user ? (
-            <button className="btn bg-indigo-500 text-white">Sign Out</button>
+            <button onClick={handleSingOut} className="btn bg-indigo-500 text-white">Sign Out</button>
           ) : (
             <div className="flex gap-2">
               <Link to="/signin" className="btn bg-indigo-500 text-white">
@@ -127,7 +152,7 @@ const Navbar = () => {
         </div>
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
-          <input onChange={handleThemes} type="checkbox" className="theme-controller " />
+          <input onChange={handleThemes} type="checkbox" className="theme-controller" />
 
           {/* sun icon */}
           <svg
@@ -148,6 +173,8 @@ const Navbar = () => {
           </svg>
         </label>
       </div>
+      <Tooltip id="my-tooltip" />
+      <ToastContainer />
     </div>
   );
 };

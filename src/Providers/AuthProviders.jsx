@@ -1,5 +1,4 @@
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { GithubAuthProvider, GoogleAuthProvider, TwitterAuthProvider } from 'firebase/auth/cordova';
+import { GithubAuthProvider, GoogleAuthProvider, TwitterAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import PropTypes from 'prop-types';
 import { createContext, useEffect, useState } from 'react';
 import app from '../Firebase/firebase.config';
@@ -45,9 +44,9 @@ const AuthProviders = ({children}) => {
        return signInWithPopup(auth, twitterProvider);
     };
 
-    const signOut = () => {
+    const logOut = () => {
         setLoading(true);
-        return signOut(auth)
+        return signOut(auth);
     };
     // signIn signUp end
 
@@ -65,7 +64,7 @@ const AuthProviders = ({children}) => {
     }, []);
     // user Auth State end
 
-    const authInfo = {user, loading, createUserWithEmailPass, signInWithEmailPass, signInWithGoogle, signInWithGithub, signInWithTwitter, signOut};
+    const authInfo = {user, loading, createUserWithEmailPass, signInWithEmailPass, signInWithGoogle, signInWithGithub, signInWithTwitter, logOut};
     
     return (
         <AuthContext.Provider value={authInfo}>
