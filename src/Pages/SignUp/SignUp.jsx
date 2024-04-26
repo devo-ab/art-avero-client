@@ -52,10 +52,10 @@ const SignUp = () => {
   return (
     <div>
       <div>
-        <section className="max-w-5xl mx-auto mt-10 p-6 dark:bg-gray-200 rounded-lg dark:text-gray-900">
+        <section className="max-w-5xl mx-auto mt-10 mb-10 rounded-xl p-6 text-base-content border border-indigo-500">
           <form onSubmit={handleSingUp} className=" flex flex-col mx-auto space-y-12">
             <h1 className="text-center text-3xl font-bold">Sign Up</h1>
-            <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-300">
+            <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm">
               <div className="grid grid-cols-6 gap-4 col-span-full">
                 <div className="col-span-full md:col-span-3">
                   <label htmlFor="name">Name</label>
