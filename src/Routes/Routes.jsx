@@ -9,6 +9,7 @@ import AddCrafts from "../Pages/AddCrafts/AddCrafts";
 import MyArtCrafts from "../Pages/MyArtCrafts/MyArtCrafts";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdatePage from "../Pages/UpdatePage/UpdatePage";
+import ViewDetails from "../Components/ViewDetails";
 
 const routes = createBrowserRouter([
     {
@@ -38,6 +39,12 @@ const routes = createBrowserRouter([
                 path: '/update-crafts/:id',
                 element: <PrivateRoutes><UpdatePage></UpdatePage></PrivateRoutes>,
                 loader:({params}) => fetch(`http://localhost:5000/crafts/${params.id}`)
+            },
+            {
+                path: '/view-details/:id',
+                element: <ViewDetails></ViewDetails>,
+                loader:({params}) => fetch(`http://localhost:5000/crafts/${params.id}`)
+
             },
             {
                 path: '/signin',
