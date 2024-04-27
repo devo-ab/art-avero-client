@@ -4,7 +4,7 @@ import 'animate.css';
 const Banner = () => {
   return (
     <div>
-      <div className="carousel w-full relative">
+      <div className="carousel w-full relative rounded-lg">
         <div id="slide1" className="carousel-item relative w-full">
           <img src="/images-1.jpeg" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -62,7 +62,7 @@ const Banner = () => {
             /></h1>
             
           </div>
-          <p className="text-base lg:text-2xl text-stone-50 text-center mt-5 animate__animated animate__slideInLeft">Welcome to our world of artistry, where each stroke tells a story, each color evokes emotion, and every creation is a masterpiece in its own right.</p>
+          <p className="text-base lg:text-2xl text-stone-50 text-center mt-1 lg:mt-5 animate__animated animate__slideInLeft">Welcome to our world of artistry, where each stroke tells a story, each color evokes emotion, and every creation is a masterpiece in its own right.</p>
         </div>
       </div>
     </div>
