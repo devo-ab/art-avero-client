@@ -8,6 +8,7 @@ import AllArtCrafts from "../Pages/AllArtCrafts/AllArtCrafts";
 import AddCrafts from "../Pages/AddCrafts/AddCrafts";
 import MyArtCrafts from "../Pages/MyArtCrafts/MyArtCrafts";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdatePage from "../Pages/UpdatePage/UpdatePage";
 
 const routes = createBrowserRouter([
     {
@@ -21,7 +22,8 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/all-art-and-crafts',
-                element: <AllArtCrafts></AllArtCrafts>
+                element: <AllArtCrafts></AllArtCrafts>,
+                loader:() => fetch('http://localhost:5000/crafts')
             },
             {
                 path: '/add-crafts',
@@ -29,7 +31,13 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/my-art-craft',
-                element: <PrivateRoutes><MyArtCrafts></MyArtCrafts></PrivateRoutes>
+                element: <PrivateRoutes><MyArtCrafts></MyArtCrafts></PrivateRoutes>,
+                loader:({params}) => fetch(`http://localhost:5000/userEmail/${params.email}`)
+            },
+            {
+                path: '/update-crafts/:id',
+                element: <PrivateRoutes><UpdatePage></UpdatePage></PrivateRoutes>,
+                loader:({params}) => fetch(`http://localhost:5000/crafts/${params.id}`)
             },
             {
                 path: '/signin',

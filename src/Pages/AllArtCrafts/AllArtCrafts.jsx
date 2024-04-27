@@ -1,7 +1,13 @@
+import { useLoaderData } from "react-router-dom";
+
+
 const AllArtCrafts = () => {
+
+    const allCrafts = useLoaderData();
+    console.log(allCrafts)
+
     return (
         <div>
-            <h1>All Arts And Crafts</h1>
         </div>
     );
 };
