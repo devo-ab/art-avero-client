@@ -87,6 +87,7 @@ const SignIn = () => {
             type="email"
             name="email"
             id="email"
+            required
             placeholder="Enter your email"
             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 text-gray-800"
           />
@@ -99,6 +100,7 @@ const SignIn = () => {
             type="password"
             name="password"
             id="password"
+            required
             placeholder="Enter your password"
             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
           />
