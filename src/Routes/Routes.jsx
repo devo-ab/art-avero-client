@@ -33,7 +33,7 @@ const routes = createBrowserRouter([
             {
                 path: '/my-art-craft',
                 element: <PrivateRoutes><MyArtCrafts></MyArtCrafts></PrivateRoutes>,
-                loader:({params}) => fetch(`http://localhost:5000/userEmail/${params.email}`)
+                loader:({params}) => fetch(`http://localhost:5000/user/${params.email}`)
             },
             {
                 path: '/update-crafts/:id',

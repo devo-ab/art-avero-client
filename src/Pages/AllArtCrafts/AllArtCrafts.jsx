@@ -32,7 +32,7 @@ const AllArtCrafts = () => {
                 <td>{craft.stockStatus}</td>
                 <td>
                   <Link to={`/view-details/${craft._id}`} className="btn btn-ghost bg-indigo-500 text-white">
-                    View Details{/* X onClick={() => handleDelete(user._id)} */}
+                    View Details
                   </Link>
                 </td>
               </tr>
