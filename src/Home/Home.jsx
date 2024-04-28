@@ -19,6 +19,7 @@ const Home = () => {
           ))}
         </div>
         <div>
+          <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">On Going Summer Sale Offer</h1>
           <SummerSale></SummerSale>
         </div>
 
