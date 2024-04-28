@@ -2,8 +2,8 @@ import { useLoaderData } from "react-router-dom";
 
 const MyArtCrafts = () => {
 
-    const myArt = useLoaderData();
-    console.log(myArt)
+    const myCraft = useLoaderData();
+    console.log(myCraft)
 
     return (
         <div>

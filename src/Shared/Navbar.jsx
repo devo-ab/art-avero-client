@@ -44,16 +44,20 @@ const Navbar = () => {
         Add Craft
       </NavLink>
 
-      <NavLink
-        to="/my-art-craft"
-        className={({ isActive }) =>
-          isActive
-            ? "text-base-content text-lg font-medium border border-indigo-500 rounded-md px-3 py-1 text-center"
-            : "text-base-content text-center text-lg"
+      <div>
+        {
+          user && <NavLink
+          to={`/my-art-craft/user/${user.email}`}
+          className={({ isActive }) =>
+            isActive
+              ? "text-base-content text-lg font-medium border border-indigo-500 rounded-md px-3 py-1 text-center"
+              : "text-base-content text-center text-lg"
+          }
+        >
+          My Art&Craft
+        </NavLink>
         }
-      >
-        My Art&Craft
-      </NavLink>
+      </div>
     </div>
   );
 

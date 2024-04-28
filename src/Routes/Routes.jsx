@@ -19,7 +19,8 @@ const routes = createBrowserRouter([
         children:[
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader:() => fetch('http://localhost:5000/crafts')
             },
             {
                 path: '/all-art-and-crafts',
@@ -31,9 +32,9 @@ const routes = createBrowserRouter([
                 element: <PrivateRoutes><AddCrafts></AddCrafts></PrivateRoutes>
             },
             {
-                path: '/my-art-craft',
+                path: '/my-art-craft/user/:email',
                 element: <PrivateRoutes><MyArtCrafts></MyArtCrafts></PrivateRoutes>,
-                loader:({params}) => fetch(`http://localhost:5000/user/${params.email}`)
+                loader:({params}) => fetch(`http://localhost:5000/my-art-craft/user?email=${params.email}`)
             },
             {
                 path: '/update-crafts/:id',
@@ -42,7 +43,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/view-details/:id',
-                element: <ViewDetails></ViewDetails>,
+                element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
                 loader:({params}) => fetch(`http://localhost:5000/crafts/${params.id}`)
 
             },
