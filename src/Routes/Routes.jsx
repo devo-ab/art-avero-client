@@ -32,9 +32,8 @@ const routes = createBrowserRouter([
                 element: <PrivateRoutes><AddCrafts></AddCrafts></PrivateRoutes>
             },
             {
-                path: '/my-art-craft/user/:email',
-                element: <PrivateRoutes><MyArtCrafts></MyArtCrafts></PrivateRoutes>,
-                loader:({params}) => fetch(`http://localhost:5000/my-art-craft/user?email=${params.email}`)
+                path: '/my-art-craft',
+                element: <PrivateRoutes><MyArtCrafts></MyArtCrafts></PrivateRoutes>
             },
             {
                 path: '/update-crafts/:id',

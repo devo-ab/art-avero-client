@@ -32,7 +32,7 @@ const SummerSale = () => {
                           <p>Customization : {suCraft.customization}</p>
                         </div>
                         <div className="flex justify-between mt-5">
-                          <button className="btn btn-ghost bg-indigo-500 text-white">Buy</button>
+                          <button className="btn btn-ghost bg-indigo-500 text-white">Buy Now</button>
                         </div>
                       </div>
                     </div>

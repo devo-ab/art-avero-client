@@ -47,7 +47,8 @@ const Navbar = () => {
       <div>
         {
           user && <NavLink
-          to={`/my-art-craft/user/${user.email}`}
+          // to={`/my-art-craft/user/${user.email}`}
+          to= "/my-art-craft"
           className={({ isActive }) =>
             isActive
               ? "text-base-content text-lg font-medium border border-indigo-500 rounded-md px-3 py-1 text-center"

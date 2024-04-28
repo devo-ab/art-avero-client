@@ -13,7 +13,7 @@ const Home = () => {
       <Banner></Banner>
       <div>
         <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">Craft Items</h1>
-        <div className="grid gap-5 grid-cols-1 md:grid-cols-2 mt-10">
+        <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
           {crafts.map((craft) => (
             <CraftCard key={craft._id} craft={craft}></CraftCard>
           ))}
