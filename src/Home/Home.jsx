@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import CraftCard from "../Components/CraftCard";
+import SummerSale from "../Components/SummerSale";
+import CustomerReview from "../Components/CustomerReview";
 
 const Home = () => {
   const crafts = useLoaderData();
@@ -15,6 +17,14 @@ const Home = () => {
           {crafts.map((craft) => (
             <CraftCard key={craft._id} craft={craft}></CraftCard>
           ))}
+        </div>
+        <div>
+          <SummerSale></SummerSale>
+        </div>
+
+        <div>
+          <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">Customers Reviews</h1>
+          <CustomerReview></CustomerReview>
         </div>
       </div>
     </div>
