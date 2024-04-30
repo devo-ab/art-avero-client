@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -42,7 +43,9 @@ const UpdatePage = () => {
         });
 
     };
-
+    useEffect(() => {
+      document.title = 'Art Avero | Update';
+    } ,[]);
   return (
     <div>
       <div>

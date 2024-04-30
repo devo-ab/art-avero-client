@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from 'sweetalert2'
 
@@ -47,6 +47,9 @@ const AddCrafts = () => {
     })
   };
 
+  useEffect(() => {
+    document.title = 'Art Avero |Add Arts & Crafts';
+  } ,[]);
   return (
     <div>
       <div>

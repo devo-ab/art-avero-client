@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllArtCrafts = () => {
   const allCrafts = useLoaderData();
   console.log(allCrafts);
 
+
+  useEffect(() => {
+    document.title = 'Art Avero | All Arts & Crafts';
+  } ,[]);
   return (
     <div className="mt-10 mb-10">
       <div className="overflow-x-auto">

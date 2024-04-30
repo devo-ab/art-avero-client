@@ -52,7 +52,9 @@ const MyArtCrafts = () => {
   };
 
   
-
+  useEffect(() => {
+    document.title = 'Art Avero | My Art & Crafts';
+  } ,[]);
   return (
     <div className="mt-10 mb-10">
       <div className="text-center">

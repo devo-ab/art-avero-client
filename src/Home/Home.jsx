@@ -4,12 +4,15 @@ import CraftCard from "../Components/CraftCard";
 import SummerSale from "../Components/SummerSale";
 import CustomerReview from "../Components/CustomerReview";
 import SubCategories from "../Components/SubCategories";
+import { useEffect } from "react";
 // import CategoriesCard from "../Components/CategoriesCard";
 
 const Home = () => {
   const crafts = useLoaderData();
   console.log(crafts);
-
+  useEffect(() => {
+    document.title = 'Art Avero | Home';
+  } ,[]);
   return (
     <div className="mt-10 mb-10">
       <Banner></Banner>
