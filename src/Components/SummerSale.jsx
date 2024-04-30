@@ -8,7 +8,7 @@ const SummerSale = () => {
     const [summerCraft, setSummerCraft] = useState([]);
 
     useEffect(() => {
-        fetch('http://art-avero-server.vercel.app/summerSale')
+        fetch('https://art-avero-server.vercel.app/summerSale')
     .then(res => res.json())
     .then(data => setSummerCraft(data))
     },[])

@@ -7,7 +7,7 @@ const SubCategories = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://art-avero-server.vercel.app/subCategories')
+        fetch('https://art-avero-server.vercel.app/subCategories')
         .then(res => res.json())
         .then(data => {setCategories(data)})
     },[]);

@@ -25,7 +25,7 @@ const AddCrafts = () => {
 
     console.log(newArt)
 
-    fetch('http://art-avero-server.vercel.app/crafts',{
+    fetch('https://art-avero-server.vercel.app/crafts',{
       method: 'POST',
       headers:{
         'content-type':'application/json'

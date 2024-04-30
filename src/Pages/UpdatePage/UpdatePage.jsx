@@ -21,7 +21,7 @@ const UpdatePage = () => {
 
     const updateArt = {image, item_name, subcategory_name, price, rating, customization, processing_time, stockStatus, short_description};
 
-    fetch(`http://art-avero-server.vercel.app/crafts/${_id}`, {
+    fetch(`https://art-avero-server.vercel.app/crafts/${_id}`, {
           method:"PUT",
           headers: {
             'content-type': 'application/json'

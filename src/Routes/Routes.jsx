@@ -22,12 +22,12 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader:() => fetch('http://art-avero-server.vercel.app/crafts')
+                loader:() => fetch('https://art-avero-server.vercel.app/crafts')
             },
             {
                 path: '/all-art-and-crafts',
                 element: <AllArtCrafts></AllArtCrafts>,
-                loader:() => fetch('http://art-avero-server.vercel.app/crafts')
+                loader:() => fetch('https://art-avero-server.vercel.app/crafts')
             },
             {
                 path: '/add-crafts',
@@ -40,12 +40,12 @@ const routes = createBrowserRouter([
             {
                 path: '/update-crafts/:id',
                 element: <PrivateRoutes><UpdatePage></UpdatePage></PrivateRoutes>,
-                loader:({params}) => fetch(`http://art-avero-server.vercel.app/crafts/${params.id}`)
+                loader:({params}) => fetch(`https://art-avero-server.vercel.app/crafts/${params.id}`)
             },
             {
                 path: '/view-details/:id',
                 element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
-                loader:({params}) => fetch(`http://art-avero-server.vercel.app/crafts/${params.id}`)
+                loader:({params}) => fetch(`https://art-avero-server.vercel.app/crafts/${params.id}`)
 
             },
             {
@@ -59,12 +59,12 @@ const routes = createBrowserRouter([
             {
                 path: '/subCategories/:id',
                 element: <CategoriesCard></CategoriesCard>,
-                loader:({params}) => fetch(`http://art-avero-server.vercel.app/subCategories/${params.id}`)
+                loader:({params}) => fetch(`https://art-avero-server.vercel.app/subCategories/${params.id}`)
             },
             {
                 path: '/subCategories/cateDetails/:id',
                 element: <CateDetails></CateDetails>,
-                loader:({params}) => fetch(`http://art-avero-server.vercel.app/subCategories/${params.id}`)
+                loader:({params}) => fetch(`https://art-avero-server.vercel.app/subCategories/${params.id}`)
             },
             
         ]

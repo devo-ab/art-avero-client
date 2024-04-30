@@ -10,7 +10,7 @@ const MyArtCrafts = () => {
   const [crafts, setCrafts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://art-avero-server.vercel.app/my-art-craft/${user?.email}`)
+    fetch(`https://art-avero-server.vercel.app/my-art-craft/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setCrafts(data);
@@ -31,7 +31,7 @@ const MyArtCrafts = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log("delete confirm");
-        fetch(`http://art-avero-server.vercel.app/craft/${_id}`, {
+        fetch(`https://art-avero-server.vercel.app/craft/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
