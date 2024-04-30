@@ -3,6 +3,8 @@ import Banner from "../Components/Banner";
 import CraftCard from "../Components/CraftCard";
 import SummerSale from "../Components/SummerSale";
 import CustomerReview from "../Components/CustomerReview";
+import SubCategories from "../Components/SubCategories";
+// import CategoriesCard from "../Components/CategoriesCard";
 
 const Home = () => {
   const crafts = useLoaderData();
@@ -19,12 +21,24 @@ const Home = () => {
           ))}
         </div>
         <div>
-          <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">On Going Summer Sale Offer</h1>
+          <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">
+            On Going Summer Sale Offer
+          </h1>
           <SummerSale></SummerSale>
         </div>
 
         <div>
-          <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">Customers Reviews</h1>
+          <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">Categories List</h1>
+          <div className="mt-5 flex">
+            <SubCategories></SubCategories>
+            {/* <CategoriesCard></CategoriesCard> */}
+          </div>
+        </div>
+
+        <div>
+          <h1 className="text-5xl text-indigo-500 mt-10 text-center font-bold">
+            Customers Reviews
+          </h1>
           <CustomerReview></CustomerReview>
         </div>
       </div>

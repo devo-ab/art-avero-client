@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { IoIosPricetags } from "react-icons/io";
 import { MdReviews } from "react-icons/md";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const SummerSale = () => {
 
     const [summerCraft, setSummerCraft] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/summerSale')
+        fetch('http://art-avero-server.vercel.app/summerSale')
     .then(res => res.json())
     .then(data => setSummerCraft(data))
     },[])

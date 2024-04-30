@@ -27,7 +27,7 @@ const AllArtCrafts = () => {
                 <th>{index + 1}</th>
                 <td>{craft.item_name}</td>
                 <td>{craft.subcategory_name}</td>
-                <td>{craft.price}</td>
+                <td>${craft.price}</td>
                 <td>{craft.rating}</td>
                 <td>{craft.stockStatus}</td>
                 <td>

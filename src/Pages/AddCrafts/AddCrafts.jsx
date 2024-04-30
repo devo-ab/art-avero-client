@@ -25,7 +25,7 @@ const AddCrafts = () => {
 
     console.log(newArt)
 
-    fetch('http://localhost:5000/crafts',{
+    fetch('http://art-avero-server.vercel.app/crafts',{
       method: 'POST',
       headers:{
         'content-type':'application/json'
@@ -43,6 +43,7 @@ const AddCrafts = () => {
           confirmButtonText: 'OK'
         })
       }
+      form.reset();
     })
   };
 

@@ -16,7 +16,7 @@ const CraftCard = ({ craft }) => {
           <h3 className="text-2xl font-semibold">{item_name}</h3>
           <h4 className="mt-1">Sub Category : {subcategory_name}</h4>
           <div className="flex gap-10">
-            <p  className=" font font-medium flex gap-2 items-center"><IoIosPricetags />Price : {price}</p>
+            <p  className=" font font-medium flex gap-2 items-center"><IoIosPricetags />Price : ${price}</p>
             <p  className=" font font-medium flex gap-2 items-center"><MdReviews />Rating : {rating}</p>
           </div>
           <div className="flex gap-10">

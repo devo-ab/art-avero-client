@@ -10,7 +10,7 @@ const MyArtCrafts = () => {
   const [crafts, setCrafts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my-art-craft/${user?.email}`)
+    fetch(`http://art-avero-server.vercel.app/my-art-craft/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setCrafts(data);
@@ -31,7 +31,7 @@ const MyArtCrafts = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log("delete confirm");
-        fetch(`http://localhost:5000/craft/${_id}`, {
+        fetch(`http://art-avero-server.vercel.app/craft/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -51,9 +51,20 @@ const MyArtCrafts = () => {
     });
   };
 
+  
+
   return (
     <div className="mt-10 mb-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div className="text-center">
+        <select className="select bg-indigo-500 text-white">
+          <option className="text-white" disabled selected>
+            Customization
+          </option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-6">
         {crafts.map((craft) => (
           <div key={craft._id}>
             <div className="border border-indigo-500 flex gap-4 p-3 rounded-md">
@@ -63,7 +74,7 @@ const MyArtCrafts = () => {
                 <div className="flex gap-5 mt-1">
                   <p className="flex items-center">
                     <IoIosPricetags />
-                    Price : {craft.price}
+                    Price : ${craft.price}
                   </p>
                   <p className="flex items-center">
                     <MdReviews />
@@ -78,7 +89,7 @@ const MyArtCrafts = () => {
                 <div className="flex gap-10">
                   <Link to={`/update-crafts/${craft._id}`}>
                     <button className="btn btn-ghost bg-indigo-500 text-white mt-1">
-                      View Details
+                      Update
                     </button>
                   </Link>
                   <button
